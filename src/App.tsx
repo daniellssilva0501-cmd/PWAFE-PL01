@@ -44,41 +44,44 @@ function App() {
       {/* Informações do aluno */}
       {/* mb-8 é uma classe do Tailwind CSS que define a margem inferior (margin-bottom) de um elemento. O valor "8" corresponde a uma escala de espaçamento definida pelo Tailwind CSS, que geralmente é baseada em múltiplos de 0,25rem (4px). Portanto, mb-8 significa que o elemento terá uma margem inferior de 2rem (32px). */}
 
-      <section className="mx-auto mb-8 max-w-md rounded-2xl bg-white p-6 shadow-lg">
+      {/* Telemóvel: empilhado e centrado. A partir de md (768px): círculo à esquerda, texto à direita */}
+      <section className="mx-auto mb-8 max-w-md rounded-2xl bg-white p-6 text-center shadow-lg md:flex md:max-w-2xl md:items-center md:gap-8 md:p-8 md:text-left">
         {/* Círculo com a inicial do nome */}
-        <div className="mb-4 flex h-24 w-24 items-center justify-center rounded-full bg-sky-600 text-4xl font-bold text-white">
+        <div className="mx-auto mb-4 flex h-24 w-24 shrink-0 items-center justify-center rounded-full bg-sky-600 text-4xl font-bold text-white md:mx-0 md:mb-0">
           {perfil.nome[0]}
         </div>
 
-        <div className="mb-4">
-          <span className="text-sm font-medium uppercase tracking-wide text-sky-600">
-            Perfil do aluno
-          </span>
+        <div className="md:flex-1">
+          <div className="mb-4">
+            <span className="text-sm font-medium uppercase tracking-wide text-sky-600">
+              Perfil do aluno
+            </span>
 
-          <h1 className="mt-1 text-3xl font-bold text-slate-900">
-            {mensagemSaudacao}, {perfil.nome}
-          </h1>
+            <h1 className="mt-1 text-3xl font-bold text-slate-900">
+              {mensagemSaudacao}, {perfil.nome}
+            </h1>
 
-          {/* Linha secundária com cor mais suave */}
-          <p className="mt-1 text-slate-500">
-            {perfil.curso} · {perfil.ano}º ano · {perfil.cidade}
-          </p>
-        </div>
+            {/* Linha secundária com cor mais suave */}
+            <p className="mt-1 text-slate-500">
+              {perfil.curso} · {perfil.ano}º ano · {perfil.cidade}
+            </p>
+          </div>
 
-        <div className="mt-5 border-t border-slate-200 pt-4">
-          <p className="mb-3 text-sm font-semibold text-slate-700">
-            Interesses
-          </p>
+          <div className="mt-5 border-t border-slate-200 pt-4">
+            <p className="mb-3 text-sm font-semibold text-slate-700">
+              Interesses
+            </p>
 
-          <div className="flex flex-wrap gap-2">
-            {perfil.interesses.map((interesse) => (
-              <span
-                key={interesse}
-                className="rounded-full bg-sky-100 px-3 py-1 text-sm font-medium text-sky-700"
-              >
-                {interesse}
-              </span>
-            ))}
+            <div className="flex flex-wrap justify-center gap-2 md:justify-start">
+              {perfil.interesses.map((interesse) => (
+                <span
+                  key={interesse}
+                  className="rounded-full bg-sky-100 px-3 py-1 text-sm font-medium text-sky-700"
+                >
+                  {interesse}
+                </span>
+              ))}
+            </div>
           </div>
         </div>
       </section>
