@@ -45,6 +45,11 @@ function App() {
       {/* mb-8 é uma classe do Tailwind CSS que define a margem inferior (margin-bottom) de um elemento. O valor "8" corresponde a uma escala de espaçamento definida pelo Tailwind CSS, que geralmente é baseada em múltiplos de 0,25rem (4px). Portanto, mb-8 significa que o elemento terá uma margem inferior de 2rem (32px). */}
 
       <section className="mx-auto mb-8 max-w-md rounded-2xl bg-white p-6 shadow-lg">
+        {/* Círculo com a inicial do nome */}
+        <div className="mb-4 flex h-24 w-24 items-center justify-center rounded-full bg-sky-600 text-4xl font-bold text-white">
+          {perfil.nome[0]}
+        </div>
+
         <div className="mb-4">
           <span className="text-sm font-medium uppercase tracking-wide text-sky-600">
             Perfil do aluno
@@ -53,25 +58,12 @@ function App() {
           <h1 className="mt-1 text-3xl font-bold text-slate-900">
             {mensagemSaudacao}, {perfil.nome}
           </h1>
-        </div>
 
-        <div className="space-y-2 text-slate-600">
-          <p className="text-lg">
-            <span className="font-semibold text-slate-800">Curso:</span>{" "}
-            {perfil.curso}
-          </p>
-
-          <p className="text-base">
-            <span className="font-semibold text-slate-800">Ano:</span>{" "}
-            {perfil.ano}º ano
-          </p>
-
-          <p className="text-base">
-            <span className="font-semibold text-slate-800">Cidade:</span>{" "}
-            {perfil.cidade}
+          {/* Linha secundária com cor mais suave */}
+          <p className="mt-1 text-slate-500">
+            {perfil.curso} · {perfil.ano}º ano · {perfil.cidade}
           </p>
         </div>
-        
 
         <div className="mt-5 border-t border-slate-200 pt-4">
           <p className="mb-3 text-sm font-semibold text-slate-700">
