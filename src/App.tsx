@@ -8,11 +8,13 @@ function saudacao(hora: number): string {
   }
 }
 
-type Aluno = {
+type Perfil = {
   nome: string;
   curso: string;
   ano: number;
+  cidade: string;
   interesses: string[];
+  procuraEstagio: boolean;
 };
 
 function App() {
@@ -20,11 +22,13 @@ function App() {
   // const curso = 'Desenvolvimento de Software'
   // const ano = 2
 
-  const aluno: Aluno = {
+  const perfil: Perfil = {
     nome: "Daniel Souza",
     curso: "Desenvolvimento de Software",
     ano: 2,
+    cidade: "Porto",
     interesses: ["Programação", "Jogos", "Música"],
+    procuraEstagio: true,
   };
 
   const horaAtual = new Date().getHours();
@@ -47,19 +51,24 @@ function App() {
           </span>
 
           <h1 className="mt-1 text-3xl font-bold text-slate-900">
-            {mensagemSaudacao}, {aluno.nome}
+            {mensagemSaudacao}, {perfil.nome}
           </h1>
         </div>
 
         <div className="space-y-2 text-slate-600">
           <p className="text-lg">
             <span className="font-semibold text-slate-800">Curso:</span>{" "}
-            {aluno.curso}
+            {perfil.curso}
           </p>
 
           <p className="text-base">
             <span className="font-semibold text-slate-800">Ano:</span>{" "}
-            {aluno.ano}º ano
+            {perfil.ano}º ano
+          </p>
+
+          <p className="text-base">
+            <span className="font-semibold text-slate-800">Cidade:</span>{" "}
+            {perfil.cidade}
           </p>
         </div>
         
@@ -70,7 +79,7 @@ function App() {
           </p>
 
           <div className="flex flex-wrap gap-2">
-            {aluno.interesses?.map((interesse) => (
+            {perfil.interesses.map((interesse) => (
               <span
                 key={interesse}
                 className="rounded-full bg-sky-100 px-3 py-1 text-sm font-medium text-sky-700"
