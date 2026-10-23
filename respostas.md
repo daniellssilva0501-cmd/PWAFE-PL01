@@ -52,15 +52,16 @@ Com `[0]`, `[1]` e `[2]` escritos à mão, um quarto interesse no objecto não a
 ## Histórico Git (`git log --oneline`)
 
 ```
-f953da0 PL01: arrumar restos do modelo e interesses por índice
-574acdd PL01: cartão responsivo
-8048486 PL01: cartão de perfil
-aad380f PL01: dados num objecto tipado Perfil
-574c267 PL01: remover restos do modelo do Vite
-51950b9 PL01: projecto base com Tailwind CSS v4
+4c2168c PL01: respostas, AI_USAGE e capturas
+8533d77 PL01: arrumar restos do modelo e interesses por índice
+1f0eb11 PL01: cartão responsivo
+e85cafd PL01: cartão de perfil
+6430545 PL01: dados num objecto tipado Perfil
+11b47af PL01: remover restos do modelo do Vite
+36679dc PL01: projecto base com Tailwind CSS v4
 ```
 
-Nota: os exercícios 1 e 2 ficaram juntos no primeiro commit. Os exercícios 3 e 6 eram código temporário (o `Loja.tsx` era para apagar no fim), por isso não têm commit próprio. O commit "PL01: JSX e TypeScript" corresponde ao `aad380f`.
+Nota: os exercícios 1 e 2 ficaram juntos no primeiro commit. Os exercícios 3 e 6 eram código temporário (o `Loja.tsx` era para apagar no fim), por isso não têm commit próprio. O commit "PL01: JSX e TypeScript" corresponde ao `6430545`.
 
 ## Capturas de ecrã
 
