@@ -18,10 +18,6 @@ type Perfil = {
 };
 
 function App() {
-  // const nome = 'Daniel Souza'
-  // const curso = 'Desenvolvimento de Software'
-  // const ano = 2
-
   const perfil: Perfil = {
     nome: "Daniel Souza",
     curso: "Desenvolvimento de Software",
@@ -73,14 +69,16 @@ function App() {
             </p>
 
             <div className="flex flex-wrap justify-center gap-2 md:justify-start">
-              {perfil.interesses.map((interesse) => (
-                <span
-                  key={interesse}
-                  className="rounded-full bg-sky-100 px-3 py-1 text-sm font-medium text-sky-700"
-                >
-                  {interesse}
-                </span>
-              ))}
+              {/* Por agora, um índice de cada vez. Na T02 passa a ser feito com map */}
+              <span className="rounded-full bg-sky-100 px-3 py-1 text-sm font-medium text-sky-700">
+                {perfil.interesses[0]}
+              </span>
+              <span className="rounded-full bg-sky-100 px-3 py-1 text-sm font-medium text-sky-700">
+                {perfil.interesses[1]}
+              </span>
+              <span className="rounded-full bg-sky-100 px-3 py-1 text-sm font-medium text-sky-700">
+                {perfil.interesses[2]}
+              </span>
             </div>
           </div>
         </div>
